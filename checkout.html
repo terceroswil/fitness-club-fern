@@ -157,6 +157,7 @@
   <script src="js/main.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/validation.js"></script>
+  <script src="js/whatsapp.js"></script>
 
   <!-- Script específico del checkout -->
   <script>
@@ -209,22 +210,26 @@
         const items = cart.map(i => `• ${i.name} × ${i.qty} = Bs ${i.price * i.qty}`).join('\n');
         const total = window.FCFCart.getTotal();
 
-        const msg = `*NUEVO PEDIDO - Fitness Club Fernandez*%0A%0A` +
-                    `*Cliente:* ${name}%0A` +
-                    `*Teléfono:* ${phone}%0A` +
-                    `*Email:* ${email}%0A` +
-                    `*Dirección:* ${address}%0A` +
-                    `*Pago:* ${payment}%0A%0A` +
-                    `*Productos:*%0A${encodeURIComponent(items)}%0A%0A` +
-                    `*TOTAL: Bs ${total}*%0A%0A` +
-                    (notes ? `*Notas:* ${encodeURIComponent(notes)}` : '');
+        // Construir el mensaje con saltos de línea reales y codificar TODO junto una sola vez
+        const rawMsg =
+          `*NUEVO PEDIDO - Fitness Club Fernandez*\n\n` +
+          `*Cliente:* ${name}\n` +
+          `*Teléfono:* ${phone}\n` +
+          `*Email:* ${email}\n` +
+          `*Dirección:* ${address}\n` +
+          `*Pago:* ${payment}\n\n` +
+          `*Productos:*\n${items}\n\n` +
+          `*TOTAL: Bs ${total}*\n\n` +
+          (notes ? `*Notas:* ${notes}` : '');
+        const msg = encodeURIComponent(rawMsg);
 
         const successMsg = document.getElementById('formSuccess');
         successMsg.classList.add('show');
 
         setTimeout(() => {
-          window.open(`https://wa.me/59168466609?text=${msg}`, '_blank');
-          window.FCFCart.clear();
+          // Selector: el cliente elige a qué asesora enviar el pedido.
+          // El carrito se vacía solo cuando confirma un contacto.
+          window.FCFWhatsApp.open(rawMsg, () => window.FCFCart.clear());
         }, 800);
       });
     });

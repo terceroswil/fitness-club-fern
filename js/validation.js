@@ -5,7 +5,7 @@
 const validators = {
   name:    v => v.trim().length >= 3,
   email:   v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
-  phone:   v => /^[0-9]{7,15}$/.test(v.trim()),
+  phone:   v => { const d = v.replace(/[\s()+-]/g, ''); return /^[0-9]{7,15}$/.test(d); },
   address: v => v.trim().length >= 5,
   plan:    v => v !== '',
   payment: v => v !== '',

@@ -232,12 +232,27 @@ if (galleryTrack) {
     galleryDots.querySelectorAll('.gallery-dot').forEach((d, idx) =>
       d.classList.toggle('active', idx === curSlide)
     );
+    if (typeof startAutoplay === 'function') startAutoplay();
   }
   const galleryPrev = document.getElementById('galleryPrev');
   const galleryNext = document.getElementById('galleryNext');
   if (galleryPrev) galleryPrev.addEventListener('click', () => goToSlide(curSlide - 1));
   if (galleryNext) galleryNext.addEventListener('click', () => goToSlide(curSlide + 1));
-  setInterval(() => goToSlide(curSlide + 1), 5000);
+
+  // Autoplay: se reinicia con cada cambio (manual o automático) para evitar saltos
+  let autoplay = null;
+  function startAutoplay() {
+    clearInterval(autoplay);
+    autoplay = setInterval(() => goToSlide(curSlide + 1), 5000);
+  }
+  startAutoplay();
+
+  // Pausar al pasar el mouse, reanudar al salir
+  const galleryWrap = galleryTrack.closest('.gallery-wrap');
+  if (galleryWrap) {
+    galleryWrap.addEventListener('mouseenter', () => clearInterval(autoplay));
+    galleryWrap.addEventListener('mouseleave', startAutoplay);
+  }
 }
 
 // --------- TESTIMONIOS CARRUSEL ---------
