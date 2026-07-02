@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda | FITNESS CLUB FERNANDEZ</title>
+  <meta name="description" content="Catálogo completo de productos Herbalife, batidos, proteínas, snacks saludables y planes nutricionales.">
+  <meta name="theme-color" content="#00ff88">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">FITNESS CLUB <span>FERNANDEZ</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#clases">Clases</a></li>
+        <li><a href="index.html#horario">Horario</a></li>
+        <li><a href="tienda.html" class="active">Tienda</a></li>
+        <li><a href="index.html#planes">Planes</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="cart-icon" id="cartIcon" role="button" aria-label="Carrito">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </div>
+        <a href="index.html#planes" class="nav-cta">Únete Ahora</a>
+        <i class="fas fa-bars menu-toggle" id="menuToggle" role="button" aria-label="Menú"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HEADER ============ -->
+  <section class="section" style="padding-top:140px">
+    <div class="container">
+      <h2 class="section-title reveal active">Tienda Completa</h2>
+      <p class="section-subtitle reveal active">Todos nuestros productos Herbalife y nutrición deportiva</p>
+
+      <!-- Buscador + Filtros -->
+      <div class="shop-controls">
+        <div class="shop-search">
+          <i class="fas fa-search"></i>
+          <input type="text" id="shopSearch" placeholder="Buscar productos...">
+        </div>
+        <div class="shop-cats">
+          <button class="filter-btn active" data-cat-filter="all">Todos</button>
+          <button class="filter-btn" data-cat-filter="Batido">Batidos</button>
+          <button class="filter-btn" data-cat-filter="Proteína">Proteínas</button>
+          <button class="filter-btn" data-cat-filter="Snack">Snacks</button>
+          <button class="filter-btn" data-cat-filter="Té">Té</button>
+          <button class="filter-btn" data-cat-filter="Bebida">Bebidas</button>
+          <button class="filter-btn" data-cat-filter="Plan">Planes</button>
+        </div>
+      </div>
+
+      <!-- Grid de productos -->
+      <div class="shop-grid" id="fullShopGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom:15px">FITNESS CLUB <span>FERNANDEZ</span></div>
+          <p>Más que un gimnasio, una comunidad comprometida con tu transformación.</p>
+          <div class="social-icons">
+            <a href="https://wa.me/59168466609" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram (próximamente)"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook (próximamente)"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok (próximamente)"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+            <li><a href="index.html#clases"><i class="fas fa-chevron-right"></i> Clases</a></li>
+            <li><a href="index.html#planes"><i class="fas fa-chevron-right"></i> Planes</a></li>
+            <li><a href="tienda.html"><i class="fas fa-chevron-right"></i> Tienda</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Horario</h4>
+          <ul>
+            <li><strong>Lun - Vie</strong><br><span style="color:var(--neon-green)">19:00 - 22:00</span></li>
+            <li><strong>Sábado</strong><br><span style="color:var(--neon-green)">8:00 - 9:00</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Consultar por WhatsApp</li>
+            <li><i class="fas fa-phone"></i> +591 68466609</li>
+            <li><i class="fab fa-whatsapp"></i> +591 68466609</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 <span>FITNESS CLUB FERNANDEZ</span> · Todos los derechos reservados
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/59168466609" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tooltip">¡Escríbenos!</span>
+  </a>
+
+  <!-- CART MODAL -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-cart"></i> Tu Carrito</h3>
+      <span class="cart-close" id="cartClose" role="button"><i class="fas fa-times"></i></span>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total:</span><strong id="cartTotal">Bs 0</strong></div>
+      <button class="cart-checkout" id="checkoutBtn">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

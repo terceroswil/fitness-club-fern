@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "cat": "Batido",
+    "name": "Fórmula 1 Vainilla",
+    "desc": "Batido nutricional Herbalife sabor vainilla, 550g",
+    "price": 280,
+    "badge": "Top",
+    "img": "https://placehold.co/400x400/0a1a14/00ff88?text=F1+Vainilla",
+    "stock": 15
+  },
+  {
+    "id": 2,
+    "cat": "Batido",
+    "name": "Fórmula 1 Chocolate",
+    "desc": "Batido nutricional sabor chocolate cremoso, 550g",
+    "price": 280,
+    "badge": "Top",
+    "img": "https://placehold.co/400x400/14140a/00ff88?text=F1+Choco",
+    "stock": 12
+  },
+  {
+    "id": 3,
+    "cat": "Proteína",
+    "name": "PDM Vainilla",
+    "desc": "Polvo de proteína Herbalife para masa muscular",
+    "price": 320,
+    "badge": "",
+    "img": "https://placehold.co/400x400/0a141a/00d4ff?text=PDM",
+    "stock": 8
+  },
+  {
+    "id": 4,
+    "cat": "Snack",
+    "name": "Barras Proteicas",
+    "desc": "Pack de 14 barras con 10g de proteína",
+    "price": 120,
+    "badge": "Nuevo",
+    "img": "https://placehold.co/400x400/1a0a14/00d4ff?text=Barras",
+    "stock": 25
+  },
+  {
+    "id": 5,
+    "cat": "Té",
+    "name": "Té Herbal Concentrado",
+    "desc": "Té energizante para quemar grasa, 100g",
+    "price": 250,
+    "badge": "",
+    "img": "https://placehold.co/400x400/0a1a0a/00ff88?text=Te+Herbal",
+    "stock": 20
+  },
+  {
+    "id": 6,
+    "cat": "Plan",
+    "name": "Plan Nutricional",
+    "desc": "Asesoría + plan personalizado por 1 mes",
+    "price": 180,
+    "badge": "Recom.",
+    "img": "https://placehold.co/400x400/141a0a/00ff88?text=Plan+Nutri",
+    "stock": 99
+  },
+  {
+    "id": 7,
+    "cat": "Snack",
+    "name": "Mix Saludable",
+    "desc": "Frutos secos y semillas premium, 500g",
+    "price": 85,
+    "badge": "",
+    "img": "https://placehold.co/400x400/0a0a1a/00d4ff?text=Mix+Snack",
+    "stock": 30
+  },
+  {
+    "id": 8,
+    "cat": "Bebida",
+    "name": "Hidratante Iso",
+    "desc": "Bebida isotónica con electrolitos, 500ml",
+    "price": 25,
+    "badge": "",
+    "img": "https://placehold.co/400x400/1a140a/00d4ff?text=Iso+Drink",
+    "stock": 50
+  },
+  {
+    "id": 9,
+    "cat": "Proteína",
+    "name": "Rebuild Strength",
+    "desc": "Recuperador post-entreno con BCAA",
+    "price": 380,
+    "badge": "",
+    "img": "https://placehold.co/400x400/0a0a14/00d4ff?text=Rebuild",
+    "stock": 10
+  },
+  {
+    "id": 10,
+    "cat": "Batido",
+    "name": "Fórmula 1 Fresa",
+    "desc": "Batido nutricional sabor fresa natural, 550g",
+    "price": 280,
+    "badge": "",
+    "img": "https://placehold.co/400x400/1a0a0a/00ff88?text=F1+Fresa",
+    "stock": 14
+  },
+  {
+    "id": 11,
+    "cat": "Snack",
+    "name": "Galletas Proteicas",
+    "desc": "12 unidades con 8g de proteína cada una",
+    "price": 95,
+    "badge": "Nuevo",
+    "img": "https://placehold.co/400x400/141a14/00d4ff?text=Galletas",
+    "stock": 22
+  },
+  {
+    "id": 12,
+    "cat": "Bebida",
+    "name": "Aloe Herbal Concentrado",
+    "desc": "Bebida a base de aloe vera, 473ml",
+    "price": 220,
+    "badge": "",
+    "img": "https://placehold.co/400x400/0a1414/00ff88?text=Aloe",
+    "stock": 18
+  }
+]

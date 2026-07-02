@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Compra | FITNESS CLUB FERNANDEZ</title>
+  <meta name="description" content="Completa tu compra en la tienda Fitness Club Fernandez">
+  <meta name="theme-color" content="#00ff88">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">FITNESS CLUB <span>FERNANDEZ</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="index.html#planes">Planes</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="cart-icon" id="cartIcon" role="button" aria-label="Carrito">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </div>
+        <i class="fas fa-bars menu-toggle" id="menuToggle" role="button" aria-label="Menú"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:140px">
+    <div class="container">
+      <h2 class="section-title reveal active">Finalizar Compra</h2>
+      <p class="section-subtitle reveal active">Completa tus datos y te contactaremos para coordinar el pago y entrega</p>
+
+      <div class="checkout-grid">
+
+        <!-- Formulario -->
+        <form class="contact-form" id="checkoutForm" novalidate>
+          <h3 style="color:var(--neon-green);margin-bottom:20px;font-size:1.5rem">Datos del Cliente</h3>
+
+          <div class="form-group">
+            <label for="name">Nombre completo *</label>
+            <input type="text" id="name" data-validate="name" required>
+            <div class="form-error">Ingresa tu nombre completo</div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Teléfono / WhatsApp *</label>
+            <input type="tel" id="phone" data-validate="phone" required>
+            <div class="form-error">Solo números, entre 7 y 15 dígitos</div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" data-validate="email" required>
+            <div class="form-error">Email inválido</div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Dirección de entrega *</label>
+            <input type="text" id="address" data-validate="address" required placeholder="Zona, calle, número, referencia">
+            <div class="form-error">Ingresa una dirección válida</div>
+          </div>
+
+          <div class="form-group">
+            <label>Método de pago *</label>
+            <div class="payment-methods">
+              <label class="payment-method">
+                <input type="radio" name="payment" value="qr" style="display:none">
+                <i class="fas fa-qrcode"></i><span>QR</span>
+              </label>
+              <label class="payment-method">
+                <input type="radio" name="payment" value="transferencia" style="display:none">
+                <i class="fas fa-university"></i><span>Transferencia</span>
+              </label>
+              <label class="payment-method">
+                <input type="radio" name="payment" value="efectivo" style="display:none">
+                <i class="fas fa-money-bill-wave"></i><span>Efectivo</span>
+              </label>
+              <label class="payment-method">
+                <input type="radio" name="payment" value="tarjeta" style="display:none">
+                <i class="far fa-credit-card"></i><span>Tarjeta</span>
+              </label>
+            </div>
+            <input type="hidden" id="payment" data-validate="payment" required>
+            <div class="form-error" id="paymentError">Selecciona un método de pago</div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Notas adicionales</label>
+            <textarea id="notes" placeholder="Instrucciones especiales de entrega..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%">
+            <i class="fab fa-whatsapp"></i> Confirmar pedido por WhatsApp
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> ¡Pedido enviado! Te contactaremos por WhatsApp.
+          </div>
+        </form>
+
+        <!-- Resumen del pedido -->
+        <div class="checkout-summary">
+          <h3><i class="fas fa-receipt"></i> Resumen del Pedido</h3>
+          <div id="checkoutItems"></div>
+          <div class="checkout-total">
+            <span>TOTAL</span>
+            <span id="checkoutTotal">Bs 0</span>
+          </div>
+          <p style="color:var(--text-dim);font-size:.8rem;margin-top:20px;text-align:center">
+            <i class="fas fa-lock"></i> Compra 100% segura
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        © 2026 <span style="color:var(--neon-green)">FITNESS CLUB FERNANDEZ</span> · Todos los derechos reservados
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/59168466609" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tooltip">¡Escríbenos!</span>
+  </a>
+
+  <!-- CART MODAL -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-cart"></i> Tu Carrito</h3>
+      <span class="cart-close" id="cartClose" role="button"><i class="fas fa-times"></i></span>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total:</span><strong id="cartTotal">Bs 0</strong></div>
+      <button class="cart-checkout" id="checkoutBtn" disabled style="opacity:.5;cursor:not-allowed">Ya estás en checkout</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/validation.js"></script>
+
+  <!-- Script específico del checkout -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cart = window.FCFCart.getAll();
+      const itemsEl = document.getElementById('checkoutItems');
+      const totalEl = document.getElementById('checkoutTotal');
+
+      // Si carrito vacío, redirigir
+      if (cart.length === 0) {
+        itemsEl.innerHTML = `
+          <div style="text-align:center;padding:40px 20px;color:var(--text-dim)">
+            <i class="fas fa-shopping-bag" style="font-size:3rem;opacity:.3;margin-bottom:20px;display:block"></i>
+            <p>Tu carrito está vacío</p>
+            <a href="tienda.html" class="btn btn-outline" style="margin-top:20px">Ir a la tienda</a>
+          </div>`;
+        totalEl.textContent = 'Bs 0';
+        document.getElementById('checkoutForm').style.display = 'none';
+      } else {
+        itemsEl.innerHTML = cart.map(i => `
+          <div class="checkout-item">
+            <span>${i.name} × ${i.qty}</span>
+            <strong>Bs ${i.price * i.qty}</strong>
+          </div>
+        `).join('');
+        totalEl.textContent = `Bs ${window.FCFCart.getTotal()}`;
+      }
+
+      // Manejo métodos de pago
+      document.querySelectorAll('.payment-method').forEach(m => {
+        m.addEventListener('click', () => {
+          document.querySelectorAll('.payment-method').forEach(x => x.classList.remove('selected'));
+          m.classList.add('selected');
+          const radio = m.querySelector('input');
+          radio.checked = true;
+          document.getElementById('payment').value = radio.value;
+          document.getElementById('payment').closest('.form-group')?.classList.remove('error');
+        });
+      });
+
+      // Envío del formulario → WhatsApp
+      window.FCFValidation.setupFormValidation('checkoutForm', form => {
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+        const address = document.getElementById('address').value;
+        const payment = document.getElementById('payment').value;
+        const notes = document.getElementById('notes').value;
+
+        const items = cart.map(i => `• ${i.name} × ${i.qty} = Bs ${i.price * i.qty}`).join('\n');
+        const total = window.FCFCart.getTotal();
+
+        const msg = `*NUEVO PEDIDO - Fitness Club Fernandez*%0A%0A` +
+                    `*Cliente:* ${name}%0A` +
+                    `*Teléfono:* ${phone}%0A` +
+                    `*Email:* ${email}%0A` +
+                    `*Dirección:* ${address}%0A` +
+                    `*Pago:* ${payment}%0A%0A` +
+                    `*Productos:*%0A${encodeURIComponent(items)}%0A%0A` +
+                    `*TOTAL: Bs ${total}*%0A%0A` +
+                    (notes ? `*Notas:* ${encodeURIComponent(notes)}` : '');
+
+        const successMsg = document.getElementById('formSuccess');
+        successMsg.classList.add('show');
+
+        setTimeout(() => {
+          window.open(`https://wa.me/59168466609?text=${msg}`, '_blank');
+          window.FCFCart.clear();
+        }, 800);
+      });
+    });
+  </script>
+</body>
+</html>

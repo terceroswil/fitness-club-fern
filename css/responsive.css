@@ -1,0 +1,47 @@
+/* =========================================
+   FITNESS CLUB FERNANDEZ - Responsive
+   Media queries mobile-first
+========================================= */
+
+/* Tablet y menores (≤ 900px) */
+@media (max-width:900px){
+  .nav-links{
+    position:fixed;top:70px;left:0;width:100%;
+    background:rgba(10,10,10,.98);backdrop-filter:blur(10px);
+    flex-direction:column;gap:0;padding:20px 0;
+    transform:translateY(-150%);transition:.4s;
+    border-bottom:1px solid var(--neon-green);
+  }
+  .nav-links.open{transform:translateY(0)}
+  .nav-links a{padding:15px 20px;width:100%;text-align:center}
+  .menu-toggle{display:block}
+  .nav-cta{display:none}
+  .contact-grid,.checkout-grid{grid-template-columns:1fr}
+  .checkout-summary{position:static}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .gallery-slide{height:350px}
+  .schedule-grid{font-size:.7rem}
+}
+
+/* Móvil (≤ 600px) */
+@media (max-width:600px){
+  .section{padding:70px 0}
+  .hero-cta{flex-direction:column;align-items:center}
+  .hero-cta .btn{width:100%;max-width:280px;text-align:center}
+  .footer-grid{grid-template-columns:1fr}
+  .stat-number{font-size:2.5rem}
+  .plan-card.featured{transform:none}
+  .plan-card.featured:hover{transform:translateY(-15px)}
+  .gallery-slide{height:280px}
+  .whatsapp-float{width:55px;height:55px;font-size:1.7rem;bottom:20px;right:20px}
+  .shop-controls{flex-direction:column;align-items:stretch}
+}
+
+/* Móvil pequeño (≤ 400px) */
+@media (max-width:400px){
+  .container{padding:0 15px}
+  .logo{font-size:1.4rem}
+  .cart-modal{width:100%}
+  .schedule-grid{grid-template-columns:60px repeat(7,1fr);padding:12px;gap:4px}
+  .schedule-cell{padding:10px 4px;min-width:60px;font-size:.65rem}
+}

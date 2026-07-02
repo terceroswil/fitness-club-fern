@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00ff88"/>
+      <stop offset="1" stop-color="#00d4ff"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="#0a0a0a"/>
+  <g filter="url(#glow)" fill="url(#g)">
+    <!-- Mancuerna estilizada -->
+    <rect x="15" y="42" width="10" height="16" rx="2"/>
+    <rect x="75" y="42" width="10" height="16" rx="2"/>
+    <rect x="25" y="46" width="8" height="8" rx="1"/>
+    <rect x="67" y="46" width="8" height="8" rx="1"/>
+    <rect x="33" y="47" width="34" height="6" rx="1"/>
+  </g>
+  <text x="50" y="82" text-anchor="middle" font-family="Arial Black,sans-serif"
+        font-size="16" font-weight="900" fill="url(#g)" filter="url(#glow)">FCF</text>
+</svg>

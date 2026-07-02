@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FITNESS CLUB FERNANDEZ | Transforma tu cuerpo, transforma tu vida</title>
+  <meta name="description" content="Gimnasio de alto rendimiento. Zumba, Aeróbic Step, Funcional, Tienda Herbalife. Promociones especiales de Julio.">
+  <meta name="keywords" content="gimnasio, fitness, zumba, aerobic, herbalife, santa cruz, bolivia">
+  <meta name="theme-color" content="#00ff88">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FITNESS CLUB FERNANDEZ | Promociones Julio">
+  <meta property="og:description" content="Inscripciones abiertas todo Julio. Aeróbicos y Zumba con precios especiales.">
+  <meta property="og:image" content="images/3.jpg">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="has-promo">
+
+  <!-- BANNER PROMOCIONAL JULIO -->
+  <div class="promo-banner" id="promoBanner">
+    🔥 <strong>Inscripciones abiertas todo Julio</strong>
+    <a href="#promociones">Ver promos</a>
+    <span class="promo-close" id="promoClose" role="button" aria-label="Cerrar">✕</span>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">FITNESS CLUB <span>FERNANDEZ</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="active">Inicio</a></li>
+        <li><a href="#promociones" style="color:var(--neon-pink)">🔥 Promo Julio</a></li>
+        <li><a href="#clases">Clases</a></li>
+        <li><a href="#horario">Horario</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="cart-icon" id="cartIcon" role="button" aria-label="Carrito">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </div>
+        <a href="#promociones" class="nav-cta">Únete Ahora</a>
+        <i class="fas fa-bars menu-toggle" id="menuToggle" role="button" aria-label="Menú"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-content">
+      <h1><span class="typed" id="typedText"></span><span class="cursor"></span></h1>
+      <p>El gimnasio donde forjamos campeones. Entrenamiento de alto rendimiento, clases dinámicas y una comunidad que te empuja a ser mejor cada día.</p>
+      <div class="hero-cta">
+        <a href="#promociones" class="btn btn-primary btn-pulse">🔥 Promo Julio <i class="fas fa-arrow-right"></i></a>
+        <a href="#clases" class="btn btn-outline">Ver Clases</a>
+      </div>
+    </div>
+    <a href="#stats" class="hero-scroll" aria-label="Scroll"><i class="fas fa-chevron-down"></i></a>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal"><i class="fas fa-users"></i><div class="stat-number" data-target="500">0</div><div class="stat-label">Miembros Activos</div></div>
+        <div class="stat-item reveal"><i class="fas fa-dumbbell"></i><div class="stat-number" data-target="10">0</div><div class="stat-label">Instructores Pro</div></div>
+        <div class="stat-item reveal"><i class="fas fa-trophy"></i><div class="stat-number" data-target="5">0</div><div class="stat-label">Años Experiencia</div></div>
+        <div class="stat-item reveal"><i class="fas fa-fire"></i><div class="stat-number" data-target="35">0</div><div class="stat-label">Clases Semanales</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOCIONES JULIO -->
+  <section class="section" id="promociones">
+    <div class="container">
+      <div class="promo-hero reveal">
+        <span class="promo-badge-top">🔥 Inscripciones abiertas · Julio</span>
+        <h2 class="section-title" style="margin-bottom:15px">Promociones Especiales</h2>
+        <p class="section-subtitle" style="margin-bottom:0">Precios grupales — Cuantas más amigas, ¡menos pagas!</p>
+      </div>
+
+      <div class="poster-wrap reveal" id="posterWrap" role="button" aria-label="Ver póster">
+        <img id="posterImg" src="images/promo-julio.jpg" alt="Póster Promoción Julio - Fitness Club Fernandez"
+             data-fallbacks='["images/promo-julio.jpeg","images/promo-julio.png","images/promo-julio.JPG","images/promo-julio.PNG","images/PROMO-JULIO.jpg"]'>
+        <div class="poster-fallback-content">
+          <i class="fas fa-image"></i>
+          <p>Póster oficial próximamente</p>
+          <small>Guarda tu poster como <strong>images/promo-julio.jpg</strong></small>
+        </div>
+        <span class="poster-badge-zoom">
+          <i class="fas fa-search-plus"></i> Toca para ampliar
+        </span>
+      </div>
+
+      <div class="promo-cards">
+        <div class="promo-card reveal">
+          <div class="promo-card-header">
+            <i class="fas fa-wind"></i>
+            <div><h3>Aeróbicos</h3><div class="time">🕗 Todos los días · 8:00 p.m.</div></div>
+          </div>
+          <div class="promo-list">
+            <div class="promo-price-row"><span class="label">👯‍♀️👯‍♀️👯‍♀️ 3 inscritas</span><span class="price">Bs 300</span></div>
+            <div class="promo-price-row"><span class="label">👯‍♀️👯‍♀️ 2 inscritas</span><span class="price">Bs 240</span></div>
+            <div class="promo-price-row"><span class="label">👯‍♀️ 1 inscrita<span class="gift">🎁 + una liga de regalo</span></span><span class="price">Bs 130</span></div>
+            <div class="promo-price-row student"><span class="label">🎓 Banco o Universidad</span><span class="price">Bs 100</span></div>
+          </div>
+          <a href="https://wa.me/59168466609?text=Hola,%20quiero%20inscribirme%20a%20Aer%C3%B3bicos%20-%20Promo%20Julio" target="_blank" rel="noopener" class="promo-cta-btn">
+            <i class="fab fa-whatsapp"></i> Inscríbete Ahora
+          </a>
+        </div>
+        <div class="promo-card zumba reveal">
+          <div class="promo-card-header">
+            <i class="fas fa-music"></i>
+            <div><h3>Zumba</h3><div class="time">🕘 Todos los días · 9:00 p.m.</div></div>
+          </div>
+          <div class="promo-list">
+            <div class="promo-price-row"><span class="label">💃💃💃 3 inscritas</span><span class="price">Bs 200</span></div>
+            <div class="promo-price-row"><span class="label">💃💃 2 inscritas</span><span class="price">Bs 150</span></div>
+            <div class="promo-price-row"><span class="label">💃 1 inscrita<span class="gift">🎁 + una liga de regalo</span></span><span class="price">Bs 100</span></div>
+            <div class="promo-price-row student"><span class="label">🎓 Universitarios y estudiantes de colegio</span><span class="price">Bs 80</span></div>
+          </div>
+          <a href="https://wa.me/59168466609?text=Hola,%20quiero%20inscribirme%20a%20Zumba%20-%20Promo%20Julio" target="_blank" rel="noopener" class="promo-cta-btn">
+            <i class="fab fa-whatsapp"></i> Inscríbete Ahora
+          </a>
+        </div>
+      </div>
+      <div class="promo-motivational reveal">
+        <p>💪 <strong>¡Es el momento de cuidar tu salud, ponerte en forma y divertirte al ritmo de la mejor música!</strong></p>
+        <p style="color:var(--text-dim);font-size:.95rem;margin:0">📲 Inscríbete hoy y asegura tu lugar</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASES -->
+  <section class="section section-alt" id="clases">
+    <div class="container">
+      <h2 class="section-title reveal">Nuestras Clases</h2>
+      <p class="section-subtitle reveal">Encuentra tu ritmo y supera tus límites</p>
+      <div class="classes-grid">
+        <div class="flip-card reveal">
+          <div class="flip-inner">
+            <div class="flip-front"><i class="fas fa-bolt"></i><h3>Funcional</h3><p>Entrenamiento integral para fuerza, cardio y resistencia</p></div>
+            <div class="flip-back">
+              <h3>Funcional</h3>
+              <div class="info-row"><span>Horario</span><span>19:00 - 20:00</span></div>
+              <div class="info-row"><span>Duración</span><span>60 min</span></div>
+              <div class="info-row"><span>Nivel</span><span>Todos</span></div>
+              <div class="info-row"><span>Calorías</span><span>~550 kcal</span></div>
+              <div class="info-row"><span>Intensidad</span><span>Alta</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card reveal">
+          <div class="flip-inner">
+            <div class="flip-front"><i class="fas fa-wind"></i><h3>Aeróbic Step</h3><p>Cardio dinámico con step para quemar grasa</p></div>
+            <div class="flip-back">
+              <h3>Aeróbic Step</h3>
+              <div class="info-row"><span>Horario</span><span>20:00 - 21:00</span></div>
+              <div class="info-row"><span>Duración</span><span>60 min</span></div>
+              <div class="info-row"><span>Nivel</span><span>Todos</span></div>
+              <div class="info-row"><span>Calorías</span><span>~500 kcal</span></div>
+              <div class="info-row"><span>Intensidad</span><span>Media-Alta</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card reveal">
+          <div class="flip-inner">
+            <div class="flip-front"><i class="fas fa-music"></i><h3>Zumba</h3><p>Baila, suda y diviértete al ritmo de la música latina</p></div>
+            <div class="flip-back">
+              <h3>Zumba Fitness</h3>
+              <div class="info-row"><span>Horario</span><span>21:00 - 22:00</span></div>
+              <div class="info-row"><span>Duración</span><span>60 min</span></div>
+              <div class="info-row"><span>Nivel</span><span>Todos</span></div>
+              <div class="info-row"><span>Calorías</span><span>~500 kcal</span></div>
+              <div class="info-row"><span>Intensidad</span><span>Media-Alta</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORARIO -->
+  <section class="section" id="horario">
+    <div class="container">
+      <h2 class="section-title reveal">Horario Semanal</h2>
+      <p class="section-subtitle reveal">Lunes a Sábado</p>
+      <div class="timeline-schedule">
+
+        <!-- 7:00 PM - FUNCIONAL -->
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">
+            <span class="hour">7:00</span>
+            <span class="period">PM</span>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-head">
+              <div class="timeline-title">
+                <i class="fas fa-bolt class-icon"></i>
+                <h3>Funcional</h3>
+              </div>
+              <div class="day-chips" aria-label="Días">
+                <span class="day-chip on">L</span>
+                <span class="day-chip on">M</span>
+                <span class="day-chip on">X</span>
+                <span class="day-chip on">J</span>
+                <span class="day-chip on">V</span>
+                <span class="day-chip">S</span>
+                <span class="day-chip">D</span>
+              </div>
+            </div>
+            <div class="timeline-details">
+              <span><i class="fas fa-clock"></i> 60 min</span>
+              <span><i class="fas fa-fire"></i> Alta intensidad</span>
+              <span><i class="fas fa-user-check"></i> Todos los niveles</span>
+              <span><i class="fas fa-bolt"></i> ~550 kcal</span>
+            </div>
+            <p class="timeline-desc">Cardio + fuerza. Entrenamiento integral con circuitos que trabajan todo el cuerpo.</p>
+          </div>
+        </div>
+
+        <!-- 8:00 PM - AERÓBIC STEP -->
+        <div class="timeline-item aerobic reveal">
+          <div class="timeline-marker">
+            <span class="hour">8:00</span>
+            <span class="period">PM</span>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-head">
+              <div class="timeline-title">
+                <i class="fas fa-wind class-icon"></i>
+                <h3>Aeróbic Step</h3>
+              </div>
+              <div class="day-chips" aria-label="Días">
+                <span class="day-chip on">L</span>
+                <span class="day-chip on">M</span>
+                <span class="day-chip on">X</span>
+                <span class="day-chip on">J</span>
+                <span class="day-chip on">V</span>
+                <span class="day-chip">S</span>
+                <span class="day-chip">D</span>
+              </div>
+            </div>
+            <div class="timeline-details">
+              <span><i class="fas fa-clock"></i> 60 min</span>
+              <span><i class="fas fa-fire"></i> Media-Alta</span>
+              <span><i class="fas fa-user-check"></i> Todos los niveles</span>
+              <span><i class="fas fa-bolt"></i> ~500 kcal</span>
+            </div>
+            <p class="timeline-desc">Cardio dinámico con step para tonificar piernas, glúteos y quemar grasa al ritmo de la música.</p>
+          </div>
+        </div>
+
+        <!-- 9:00 PM - ZUMBA -->
+        <div class="timeline-item zumba reveal">
+          <div class="timeline-marker">
+            <span class="hour">9:00</span>
+            <span class="period">PM</span>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-head">
+              <div class="timeline-title">
+                <i class="fas fa-music class-icon"></i>
+                <h3>Zumba</h3>
+              </div>
+              <div class="day-chips" aria-label="Días">
+                <span class="day-chip on">L</span>
+                <span class="day-chip on">M</span>
+                <span class="day-chip on">X</span>
+                <span class="day-chip on">J</span>
+                <span class="day-chip on">V</span>
+                <span class="day-chip">S</span>
+                <span class="day-chip">D</span>
+              </div>
+            </div>
+            <div class="timeline-details">
+              <span><i class="fas fa-clock"></i> 60 min</span>
+              <span><i class="fas fa-fire"></i> Media-Alta</span>
+              <span><i class="fas fa-user-check"></i> Todos los niveles</span>
+              <span><i class="fas fa-bolt"></i> ~500 kcal</span>
+            </div>
+            <p class="timeline-desc">Baila, suda y diviértete al ritmo de la mejor música latina. La mejor forma de terminar tu día.</p>
+          </div>
+        </div>
+
+        <!-- SÁBADO 8 AM - CLASE ESPECIAL -->
+        <div class="timeline-item saturday reveal">
+          <div class="timeline-marker">
+            <span class="hour">8:00</span>
+            <span class="period">AM</span>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-head">
+              <div class="timeline-title">
+                <i class="fas fa-sun class-icon"></i>
+                <h3>Sábado Fit</h3>
+              </div>
+              <div class="day-chips" aria-label="Días">
+                <span class="day-chip">L</span>
+                <span class="day-chip">M</span>
+                <span class="day-chip">X</span>
+                <span class="day-chip">J</span>
+                <span class="day-chip">V</span>
+                <span class="day-chip on">S</span>
+                <span class="day-chip">D</span>
+              </div>
+            </div>
+            <div class="timeline-details">
+              <span><i class="fas fa-clock"></i> 60 min</span>
+              <span><i class="fas fa-sun"></i> Sesión matutina</span>
+              <span><i class="fas fa-user-check"></i> Todos los niveles</span>
+            </div>
+            <p class="timeline-desc">Sesión especial de fin de semana. Empieza tu sábado con energía y motivación.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="reveal" style="text-align:center;margin-top:30px;color:var(--text-dim);font-size:.9rem">
+        <p><i class="fas fa-info-circle" style="color:var(--neon-green);margin-right:8px"></i>
+        <strong style="color:var(--text)">Lun–Vie:</strong> 19:00 Funcional · 20:00 Aeróbic Step · 21:00 Zumba
+        &nbsp;·&nbsp;
+        <strong style="color:var(--text)">Sábado:</strong> 8:00 a 9:00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIENDA (preview) -->
+  <section class="section section-alt" id="tienda">
+    <div class="container">
+      <h2 class="section-title reveal">Tienda Herbalife & Nutrición</h2>
+      <p class="section-subtitle reveal">Productos premium para potenciar tu entrenamiento</p>
+      <div class="shop-grid" id="shopGrid"></div>
+      <div style="text-align:center;margin-top:40px" class="reveal">
+        <a href="tienda.html" class="btn btn-outline">Ver todos los productos <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANES -->
+  <section class="section" id="planes">
+    <div class="container">
+      <h2 class="section-title reveal">Planes Mensuales</h2>
+      <p class="section-subtitle reveal">Membresías flexibles para uso completo del gimnasio</p>
+      <div class="plans-grid">
+        <div class="plan-card reveal">
+          <h3 class="plan-name">Básico</h3>
+          <p class="plan-desc">Perfecto para empezar</p>
+          <div class="plan-price">Bs 85<small>/mes</small></div>
+          <p class="plan-period">Sin permanencia</p>
+          <ul class="plan-features">
+            <li><i class="fas fa-check-circle"></i> Acceso al gimnasio</li>
+            <li><i class="fas fa-check-circle"></i> Vestuarios y duchas</li>
+            <li><i class="fas fa-check-circle"></i> 2 clases grupales/semana</li>
+            <li class="disabled"><i class="fas fa-times-circle"></i> Asesoría personalizada</li>
+            <li class="disabled"><i class="fas fa-times-circle"></i> Plan nutricional</li>
+          </ul>
+          <a href="https://wa.me/59168466609?text=Hola,%20quiero%20contratar%20el%20*Plan%20B%C3%A1sico*%20(Bs%2085/mes)" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Contratar</a>
+        </div>
+        <div class="plan-card featured reveal">
+          <div class="plan-badge">Más Popular</div>
+          <h3 class="plan-name">Pro</h3>
+          <p class="plan-desc">El equilibrio perfecto</p>
+          <div class="plan-price">Bs 120<small>/mes</small></div>
+          <p class="plan-period">Plan más elegido</p>
+          <ul class="plan-features">
+            <li><i class="fas fa-check-circle"></i> Acceso ilimitado</li>
+            <li><i class="fas fa-check-circle"></i> Todas las clases grupales</li>
+            <li><i class="fas fa-check-circle"></i> Asesoría con instructor</li>
+            <li><i class="fas fa-check-circle"></i> Plan de entrenamiento</li>
+            <li><i class="fas fa-check-circle"></i> 10% dto. en tienda</li>
+          </ul>
+          <a href="https://wa.me/59168466609?text=Hola,%20quiero%20contratar%20el%20*Plan%20Pro*%20(Bs%20120/mes)" target="_blank" rel="noopener" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Contratar</a>
+        </div>
+        <div class="plan-card reveal">
+          <h3 class="plan-name">Elite</h3>
+          <p class="plan-desc">Experiencia premium completa</p>
+          <div class="plan-price">Bs 200<small>/mes</small></div>
+          <p class="plan-period">Resultados garantizados</p>
+          <ul class="plan-features">
+            <li><i class="fas fa-check-circle"></i> Todo del Plan Pro</li>
+            <li><i class="fas fa-check-circle"></i> Entrenador personal 1:1</li>
+            <li><i class="fas fa-check-circle"></i> Plan nutricional Herbalife</li>
+            <li><i class="fas fa-check-circle"></i> Evaluación bio-impedancia</li>
+            <li><i class="fas fa-check-circle"></i> 20% dto. en tienda</li>
+          </ul>
+          <a href="https://wa.me/59168466609?text=Hola,%20quiero%20contratar%20el%20*Plan%20Elite*%20(Bs%20200/mes)" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Contratar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="section section-alt" id="galeria">
+    <div class="container">
+      <h2 class="section-title reveal">Galería</h2>
+      <p class="section-subtitle reveal">Conoce nuestras instalaciones</p>
+      <div class="gallery-wrap reveal">
+        <div class="gallery-track" id="galleryTrack">
+          <div class="gallery-slide"><img src="images/Screenshot_1.jpg" alt="Zona Cardio"><div class="gallery-caption"><h3>Zona Cardio</h3><p>Equipos de última generación</p></div></div>
+          <div class="gallery-slide"><img src="images/Screenshot_2.jpg" alt="Pesas"><div class="gallery-caption"><h3>Área de Pesas</h3><p>Musculación profesional</p></div></div>
+          <div class="gallery-slide"><img src="images/Screenshot_3.jpg" alt="Clases"><div class="gallery-caption"><h3>Clases Grupales</h3><p>Energía y motivación</p></div></div>
+          <div class="gallery-slide"><img src="images/Screenshot_4.jpg" alt="Funcional"><div class="gallery-caption"><h3>Zona Funcional</h3><p>Entrenamiento integral</p></div></div>
+          <div class="gallery-slide"><img src="images/Screenshot_5.jpg" alt="Resultados"><div class="gallery-caption"><h3>Resultados Reales</h3><p>Transformaciones que inspiran</p></div></div>
+        </div>
+        <button class="gallery-arrow prev" id="galleryPrev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <button class="gallery-arrow next" id="galleryNext" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="gallery-dots" id="galleryDots"></div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section section-alt" id="contacto">
+    <div class="container">
+      <h2 class="section-title reveal">Inscríbete Ahora</h2>
+      <p class="section-subtitle reveal">Da el primer paso hacia tu mejor versión</p>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Comienza Tu Transformación</h3>
+          <p>Completa el formulario y un asesor te contactará.</p>
+          <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><strong>Ubicación</strong><br><span style="color:var(--text-dim)">Consultar por WhatsApp para dirección exacta</span></div></div>
+          <div class="contact-item"><i class="fas fa-phone"></i><div><strong>Teléfono</strong><br><span style="color:var(--text-dim)">+591 68466609</span></div></div>
+          <div class="contact-item"><i class="fas fa-envelope"></i><div><strong>WhatsApp</strong><br><span style="color:var(--text-dim)">Respuesta rápida por chat</span></div></div>
+          <div class="contact-item"><i class="fas fa-clock"></i><div><strong>Horario</strong><br><span style="color:var(--text-dim)">Lun-Vie: 19:00 - 22:00 | Sáb: 8:00 - 9:00</span></div></div>
+        </div>
+        <form class="contact-form reveal-right" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" data-validate="name" required>
+            <div class="form-error">Ingresa tu nombre completo (mín. 3 caracteres)</div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" data-validate="email" required>
+            <div class="form-error">Ingresa un email válido</div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" data-validate="phone" required>
+            <div class="form-error">Solo números, entre 7 y 15 dígitos</div>
+          </div>
+          <div class="form-group">
+            <label for="plan">Interés</label>
+            <select id="plan" data-validate="plan" required>
+              <option value="">Selecciona una opción</option>
+              <option value="aerobicos">Aeróbicos (Promo Julio)</option>
+              <option value="zumba">Zumba (Promo Julio)</option>
+              <option value="basico">Plan Básico</option>
+              <option value="pro">Plan Pro</option>
+              <option value="elite">Plan Elite</option>
+              <option value="consulta">Solo una consulta</option>
+            </select>
+            <div class="form-error">Selecciona una opción</div>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje (opcional)</label>
+            <textarea id="message" placeholder="Cuéntanos tus objetivos..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%">Enviar Solicitud <i class="fas fa-paper-plane"></i></button>
+          <div class="form-success" id="formSuccess"><i class="fas fa-check-circle"></i> ¡Gracias! Te contactaremos pronto.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom:15px">FITNESS CLUB <span>FERNANDEZ</span></div>
+          <p>Más que un gimnasio, una comunidad comprometida con tu transformación.</p>
+          <div class="social-icons">
+            <a href="https://wa.me/59168466609" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram (próximamente)"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook (próximamente)"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok (próximamente)"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#hero"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+            <li><a href="#promociones"><i class="fas fa-chevron-right"></i> Promo Julio</a></li>
+            <li><a href="#clases"><i class="fas fa-chevron-right"></i> Clases</a></li>
+            <li><a href="#planes"><i class="fas fa-chevron-right"></i> Planes</a></li>
+            <li><a href="tienda.html"><i class="fas fa-chevron-right"></i> Tienda</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Horario</h4>
+          <ul>
+            <li><strong>Lun - Vie</strong><br><span style="color:var(--neon-green)">19:00 - 22:00</span></li>
+            <li><strong>Sábado</strong><br><span style="color:var(--neon-green)">8:00 - 9:00</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Consultar por WhatsApp</li>
+            <li><i class="fas fa-phone"></i> +591 68466609</li>
+            <li><i class="fab fa-whatsapp"></i> +591 68466609</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 <span>FITNESS CLUB FERNANDEZ</span> · Todos los derechos reservados · Hecho con 💪 en Bolivia
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/59168466609" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tooltip">¡Escríbenos!</span>
+  </a>
+
+  
+  <!-- LIGHTBOX PÓSTER -->
+  <div class="poster-lightbox" id="posterLightbox">
+    <button class="poster-lightbox-close" id="posterLightboxClose" aria-label="Cerrar">
+      <i class="fas fa-times"></i>
+    </button>
+    <img id="posterLightboxImg" src="images/promo-julio.jpg" alt="Póster Promoción Julio ampliado">
+  </div>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-cart"></i> Tu Carrito</h3>
+      <span class="cart-close" id="cartClose" role="button" aria-label="Cerrar"><i class="fas fa-times"></i></span>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total:</span><strong id="cartTotal">Bs 0</strong></div>
+      <button class="cart-checkout" id="checkoutBtn">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>

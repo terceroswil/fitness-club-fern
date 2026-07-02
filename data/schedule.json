@@ -1,0 +1,16 @@
+{
+  "days": ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
+  "times": ["8:00", "19:00", "20:00", "21:00"],
+  "classes": {
+    "zumba": { "name": "Zumba", "icon": "fa-music", "color": "#ff00ff" },
+    "aerobic": { "name": "Aeróbic Step", "icon": "fa-wind", "color": "#00d4ff" },
+    "funcional": { "name": "Funcional", "icon": "fa-bolt", "color": "#ffaa00" },
+    "fitness": { "name": "Musculación", "icon": "fa-dumbbell", "color": "#00ff88" }
+  },
+  "schedule": {
+    "8:00": [null, null, null, null, null, "zumba", null],
+    "19:00": ["funcional", "funcional", "funcional", "funcional", "funcional", null, null],
+    "20:00": ["aerobic", "aerobic", "aerobic", "aerobic", "aerobic", null, null],
+    "21:00": ["zumba", "zumba", "zumba", "zumba", "zumba", null, null]
+  }
+}
