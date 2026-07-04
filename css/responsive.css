@@ -38,6 +38,9 @@
   .dropin-price{width:100%}
   .gallery-slide{height:280px}
   .whatsapp-float{width:55px;height:55px;font-size:1.7rem;bottom:20px;right:20px}
+  .share-float{width:50px;height:50px;font-size:1.35rem;bottom:85px;right:22px}
+  .share-panel{bottom:145px;right:20px;width:220px}
+  .share-toast{bottom:145px;right:80px}
   .shop-controls{flex-direction:column;align-items:stretch}
 }
 
