@@ -33,14 +33,14 @@
   .plan-card.featured{transform:none}
   .plan-card.featured:hover{transform:translateY(-15px)}
   .dropin-banner{flex-direction:column;text-align:center;padding:28px 22px;gap:20px}
-  .dropin-info{text-align:center}
+  .dropin-info{text-align:center;min-width:0}
   .dropin-info p{margin:0 auto}
-  .dropin-price{width:100%}
+  .dropin-price{width:100%;min-width:0}
   .gallery-slide{height:280px}
-  .whatsapp-float{width:55px;height:55px;font-size:1.7rem;bottom:20px;right:20px}
-  .share-float{width:50px;height:50px;font-size:1.35rem;bottom:85px;right:22px}
-  .share-panel{bottom:145px;right:20px;width:220px}
-  .share-toast{bottom:145px;right:80px}
+  .whatsapp-float{width:55px;height:55px;font-size:1.7rem;bottom:calc(18px + env(safe-area-inset-bottom));right:18px}
+  .share-float{width:50px;height:50px;font-size:1.35rem;bottom:calc(82px + env(safe-area-inset-bottom));right:20px}
+  .share-panel{bottom:calc(142px + env(safe-area-inset-bottom));right:18px;width:min(220px,calc(100vw - 36px))}
+  .share-toast{bottom:calc(142px + env(safe-area-inset-bottom));right:80px}
   .shop-controls{flex-direction:column;align-items:stretch}
 }
 
