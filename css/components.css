@@ -304,6 +304,39 @@
 .plan-features li.disabled{opacity:.4;text-decoration:line-through}
 .plan-features li.disabled i{color:#555;text-shadow:none}
 
+/* ---- Pago por sesión (clase suelta) ---- */
+.dropin-banner{
+  margin-top:40px;display:flex;align-items:center;gap:30px;flex-wrap:wrap;
+  background:linear-gradient(135deg,rgba(0,255,136,.09),rgba(0,212,255,.05));
+  border:1px solid var(--neon-green);border-radius:20px;
+  padding:30px 35px;position:relative;overflow:hidden;
+  box-shadow:0 12px 40px rgba(0,0,0,.35);
+}
+.dropin-icon{
+  width:70px;height:70px;flex-shrink:0;border-radius:50%;
+  background:var(--neon-green);color:#000;font-size:1.8rem;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 25px rgba(0,255,136,.5);
+}
+.dropin-info{flex:1;min-width:240px}
+.dropin-tag{
+  display:inline-block;background:rgba(0,255,136,.15);color:var(--neon-green);
+  font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;
+  padding:5px 13px;border-radius:50px;margin-bottom:12px;
+}
+.dropin-info h3{font-size:1.6rem;color:var(--text,#fff);margin-bottom:8px}
+.dropin-info p{color:var(--text-dim);font-size:.95rem;max-width:440px;line-height:1.5}
+.dropin-price{
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  text-align:center;min-width:200px;
+}
+.dropin-free{color:var(--neon-green);font-weight:600;font-size:.95rem}
+.dropin-amount{
+  font-family:'Bebas Neue',sans-serif;font-size:3rem;line-height:1;color:var(--text,#fff);
+}
+.dropin-amount small{font-size:1rem;color:var(--text-dim);font-weight:400}
+.dropin-price .btn{width:100%}
+
 /* ============ GALERÍA ============ */
 .gallery-wrap{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--glass-border)}
 .gallery-track{display:flex;transition:transform .6s ease}
