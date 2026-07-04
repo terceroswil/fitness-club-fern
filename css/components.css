@@ -1002,4 +1002,36 @@ body.has-promo .navbar{top:38px}
   border-radius:50px;color:var(--text);font-family:inherit;
 }
 .shop-search input:focus{outline:none;border-color:var(--neon-green);box-shadow:var(--shadow-green)}
-.shop-search i{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var
+.shop-search i{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--neon-green)}
+.shop-cats{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ============ CHECKOUT PAGE ============ */
+.checkout-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.checkout-summary{
+  background:var(--glass);backdrop-filter:blur(10px);
+  border:1px solid var(--glass-border);border-radius:20px;padding:30px;
+  position:sticky;top:100px;
+}
+.checkout-summary h3{color:var(--neon-green);margin-bottom:20px;font-size:1.5rem}
+.checkout-item{
+  display:flex;justify-content:space-between;
+  padding:12px 0;border-bottom:1px solid var(--glass-border);
+  color:var(--text-dim);font-size:.9rem;
+}
+.checkout-item strong{color:var(--text)}
+.checkout-total{
+  display:flex;justify-content:space-between;
+  padding-top:20px;margin-top:10px;
+  border-top:2px solid var(--neon-green);
+  font-family:'Bebas Neue',sans-serif;font-size:1.8rem;
+  color:var(--neon-green);letter-spacing:2px;
+}
+.payment-methods{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin:20px 0}
+.payment-method{
+  padding:15px;text-align:center;
+  background:var(--glass);border:2px solid var(--glass-border);
+  border-radius:12px;cursor:pointer;transition:.3s;
+}
+.payment-method:hover,.payment-method.selected{border-color:var(--neon-green);color:var(--neon-green);box-shadow:var(--shadow-green)}
+.payment-method i{font-size:1.8rem;display:block;margin-bottom:6px}
+.payment-method span{font-size:.8rem;font-weight:600}
