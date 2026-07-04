@@ -44,8 +44,4 @@
 /* Móvil pequeño (≤ 400px) */
 @media (max-width:400px){
   .container{padding:0 15px}
-  .logo{font-size:1.4rem}
-  .cart-modal{width:100%}
-  .schedule-grid{grid-template-columns:60px repeat(7,1fr);padding:12px;gap:4px}
-  .schedule-cell{padding:10px 4px;min-width:60px;font-size:.65rem}
-}
+  .logo{font-size:1.4re
