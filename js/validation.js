@@ -57,13 +57,36 @@ function setupFormValidation(formId, onSuccess) {
 // Auto-setup del formulario de contacto principal
 document.addEventListener('DOMContentLoaded', () => {
   setupFormValidation('contactForm', form => {
+    const name = form.querySelector('#name')?.value || '';
+    const email = form.querySelector('#email')?.value || '';
+    const phone = form.querySelector('#phone')?.value || '';
+    const plan = form.querySelector('#plan')?.value || '';
+    const message = form.querySelector('#message')?.value || '';
+
+    // Formatear texto para WhatsApp
+    const rawMsg =
+      `*SOLICITUD DE INSCRIPCIÓN - Fitness Club Fernandez*\n\n` +
+      `*Nombre:* ${name}\n` +
+      `*Email:* ${email}\n` +
+      `*Teléfono:* ${phone}\n` +
+      `*Plan de Interés:* ${plan}\n` +
+      (message ? `*Mensaje:* ${message}` : '');
+
     const successMsg = document.getElementById('formSuccess');
     if (successMsg) {
       successMsg.classList.add('show');
       setTimeout(() => successMsg.classList.remove('show'), 5000);
     }
+
     form.reset();
     form.querySelectorAll('.valid').forEach(el => el.classList.remove('valid'));
+
+    // Enrutar al selector de WhatsApp
+    if (window.FCFWhatsApp) {
+      setTimeout(() => {
+        window.FCFWhatsApp.open(rawMsg);
+      }, 800);
+    }
   });
 });
 
